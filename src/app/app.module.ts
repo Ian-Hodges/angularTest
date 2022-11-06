@@ -20,7 +20,10 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
       collection: collectionReducer,
     }),
     HttpClientModule,
-    StoreDevtoolsModule,
+    StoreDevtoolsModule.instrument({
+      name: 'VTM Web Dev Tools',
+      maxAge: 25,
+    }),
   ],
   declarations: [
     AppComponent,
